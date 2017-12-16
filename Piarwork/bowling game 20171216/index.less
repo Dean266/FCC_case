@@ -1,0 +1,71 @@
+.bor_test{border:1px black solid;border-radius: 10px;};//测试边框
+.bor_test1{border:1px red solid;border-radius: 10px;};//二级测试边框
+.bor_test2{border:1px blue solid;border-radius: 10px;};//三级测试边框
+.but_css{border:1px black solid;border-radius: 10px;background-color: grey;};
+.abs_center{top:0px;right:0px;bottom:0px;left:0px;margin:auto auto;}//公用样式：实现绝对定位的水平垂直居中。
+.hide{display: none;};//公用样式：隐藏（使用时删除此样式即可显示元素）
+@title_fs:30px;
+@detail_fs:20px;
+
+body{
+	text-align: center;
+	background-image: url(images/bg-img.jpg);
+	min-width: 800px;
+	margin:0px;
+	padding:0px;
+}
+
+h1{
+	font-size: @title_fs;
+}
+
+h5{
+	font-size: @detail_fs;
+}
+
+.button{
+	.but_css;
+	width: 20%;
+	.abs_center;
+	margin: 10px auto;
+}
+
+.section{
+	.bor_test;
+	margin: 10px auto;
+	width: 800px;
+	
+}
+
+.controller{
+	height: 20px;
+	margin:20px;
+	background-color: grey;
+}
+
+//以上是全局变量或多处变量，以下是各区域变量
+
+#gameArea{
+	position: relative;
+	& .operation{
+		.bor_test1;
+		width: 40%;
+		display: inline-block;
+	}
+	& .result{
+		.bor_test1;
+		height: 100px;
+		background-color: white;
+		margin:20px;
+	}
+}
+
+#scoreArea{
+	position: relative;
+	& .containerHalf{
+		.bor_test1;
+		width: 40%;
+		display: inline-block;
+		margin: 10px;
+	}
+}

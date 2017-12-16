@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bowling-game</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div id="pageTitle" class="section">
+		<h1>Test bowling-game by HCJ</h1>
+	</div>
+	<div id="gameArea" class="section">
+		<!-- <h2>This area for gaming</h1> -->
+		<h1 class="score">当前第N轮</h1>
+		<div class="operation" id="oper_horizontal">
+			<div><h5>方向控制</h5></div>
+			<div class="controller" id="cont_hori"></div>
+			<!-- 实现方式：CSS中用百分比来实现左右晃动控制方向 -->
+			<!-- 动作控制：JS中点击之前有动图显示及点击提示，点击之后不再左右晃动，点击提示消失 -->
+			<!-- 得分规则：点击时越靠近中间得分越高，10分为满分，左右百分之十为0分（可考虑的离开赛道） -->
+		</div>
+		<div class="operation" id="oper_vertical">
+			<div><h5>力度控制</h5></div>
+			<div class="controller" id="cont_vert"></div>
+			<!-- 实现方式：CSS中用百分比来实现左右晃动控制力度 -->
+			<!-- 动作控制：JS中点击之前有动图显示及点击提示，点击之后不再左右晃动，点击提示消失 -->
+			<!-- 得分规则：点击时越靠近中间得分越高，10分为满分，左右百分之十为0分（可考虑的到不了终点及球飞了） -->
+		</div>
+		<div class="result">
+			<h5>This is game result</h5>
+			<div id="ball"></div>
+			<div id="pins"></div>
+			<!-- 实现方式：水平移动按照方向的点击对应实现（可以考虑超出球道的情况），上下移动按照百分比直接实现（不与用户点击力度对应，可考虑球飞了和到不了终点的情况） -->
+			<!-- 动作控制：通过按钮控制开始扔保龄球 -->
+			<!-- 得分规则：方向得分乘以力度得分，即为最终得分 -->
+		</div>
+	</div>
+	<!-- 注意要等到动画完成后，才改动下方内容 -->
+	<div id="scoreArea" class="section">
+		<!-- <h2>This area for user's score</h1> -->
+		<div class="containerHalf">
+			<div class="scoreContainer">
+				<div class="scorAboult" id="roundScore">本轮得分：0</div>
+				<!-- 这里用innerHtml来控制文字内容 -->
+			</div>
+			<div class="scoreContainer">
+				<div class="scorAboult" id="roundPrize">得分奖励：无</div>
+				<!-- 这里用innerHtml来控制文字内容 -->
+			</div>
+		</div>
+		<div class="containerHalf">
+			<div class="scoreContainer">
+				<div class="scorAboult" id="maxScore">单轮高分：0</div>
+				<!-- 这里用innerHtml来控制文字内容 -->
+			</div>
+			<div class="scoreContainer">
+				<div class="scorAboult" id="totalScore">当前总分：0</div>
+				<!-- 这里用innerHtml来控制文字内容 -->
+			</div>
+		</div>
+			<div class="next">
+				<h1 class="button" id="nextButton">下一轮</h1>
+				<div class="Container">
+					<div class="scorAboult" id="roundRemain">剩余次数：10</div>
+					<!-- 这里用innerHtml来控制文字内容 -->
+				</div>
+			</div>
+	</div>
+	<div id="orderArea" class="section">
+		<div class="evaluationContainer">
+			<h1 class="evaTitle">【球技评价】</h1>
+			<div class="evaDetail" id="evaluation">游戏还未结束</div>
+			<!-- 你需要勤加练习！<br>（看见下面那个【重玩】按钮了吗？点它！）-->
+			<!-- 34-66：手感不错，再来一次怎么样？（再试试说不定会有惊喜哦！） -->
+			<!-- 67-100：老司机受我一拜！（惊喜就是100分以上，有红包可以领！） -->
+			<!-- 100+：神之手！（打开支付宝的红包界面，输入数字口令，领取奖励红包！） -->
+		</div>
+		<!-- <h2>This area for user operation</h1> -->
+		<!-- <button class="orderButton" id="nextRound">下一轮</button> -->
+		<h1 class="button" id="newRound">重玩</h1>
+	</div>
+</body>
+</html>

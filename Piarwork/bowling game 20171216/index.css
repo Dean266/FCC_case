@@ -1,0 +1,90 @@
+.bor_test {
+  border: 1px black solid;
+  border-radius: 10px;
+}
+.bor_test1 {
+  border: 1px red solid;
+  border-radius: 10px;
+}
+.bor_test2 {
+  border: 1px blue solid;
+  border-radius: 10px;
+}
+.but_css {
+  border: 1px black solid;
+  border-radius: 10px;
+  background-color: grey;
+}
+.abs_center {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto auto;
+}
+.hide {
+  display: none;
+}
+body {
+  text-align: center;
+  background-image: url(images/bg-img.jpg);
+  min-width: 800px;
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  font-size: 30px;
+}
+h5 {
+  font-size: 20px;
+}
+.button {
+  border: 1px black solid;
+  border-radius: 10px;
+  background-color: grey;
+  width: 20%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto auto;
+  margin: 10px auto;
+}
+.section {
+  border: 1px black solid;
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 800px;
+}
+.controller {
+  height: 20px;
+  margin: 20px;
+  background-color: grey;
+}
+#gameArea {
+  position: relative;
+}
+#gameArea .operation {
+  border: 1px red solid;
+  border-radius: 10px;
+  width: 40%;
+  display: inline-block;
+}
+#gameArea .result {
+  border: 1px red solid;
+  border-radius: 10px;
+  height: 100px;
+  background-color: white;
+  margin: 20px;
+}
+#scoreArea {
+  position: relative;
+}
+#scoreArea .containerHalf {
+  border: 1px red solid;
+  border-radius: 10px;
+  width: 40%;
+  display: inline-block;
+  margin: 10px;
+}
+/*# sourceMappingURL=index.css.map */
